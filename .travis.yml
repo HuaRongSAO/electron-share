@@ -2,6 +2,11 @@ osx_image: xcode8.3
 sudo: required
 dist: trusty
 language: c
+# OOt47JO2Es2MvMEC3HScgfPMVqD7pZ+nP2DwRUOmQztwjzliuF+2aTLFayd7YRFUY/srxflOzrg6uQHF0XkprHTAqz/BdboxGgUkLBH6w2mtI+MqSLaCMgrg4cPSchygja1br5qTuv+VdAZqpOMbmBLI+rtfcyr9ZWEDUKxC7VBapuIDlWKHW6d709D6Zjfnoi38fjKeNOz/Edi5UNr+aM8X4JD1MzX7HBILndBkNUrU1kAkvqGbY3E03nsVqL0ntk83K5lEO0LSyzTXWwTgFqcbgiQ1tngtKRSbQC5QjN9va7gL+N7cC7CR6B0Q0Lwf7NNwxH7NxEpl5FQn0l4s9E9LSC5xO0Y1DVVhzEMcZndIBFxsb02S1x8sOC6HLNrnEJ7+xjZoMXM6/SUYjMeCUVJ4kqn/xkJ3byo+uku/P+0+HqchF8sydY78oEA1kUtDSlFXGI4HotAHP5gwxBH3Bw23sSh5YGi6MJKBjCPKCsx7Iufbe4LDVmsxstTgCfa05vgesfM5LcDrZwEgLSd/B5q00NOfEgGZai/Ds9orYHcNPRyZqhyYn55NuAqyeCVZVKbf9YkcrSWESAakGPGCqE4qZ+20s+bg5LQkudV1pcriPT0/APVF81tCgPBqF2VsjLkP7iIHlJjDua+0a1dYSsHnSwIRH3Mh/
+env:
+  GH_TOKEN:
+  - secure: "OOt47JO2Es2MvMEC3HScgfPMVqD7pZ+nP2DwRUOmQztwjzliuF+2aTLFayd7YRFUY/srxflOzrg6uQHF0XkprHTAqz/BdboxGgUkLBH6w2mtI+MqSLaCMgrg4cPSchygja1br5qTuv+VdAZqpOMbmBLI+rtfcyr9ZWEDUKxC7VBapuIDlWKHW6d709D6Zjfnoi38fjKeNOz/Edi5UNr+aM8X4JD1MzX7HBILndBkNUrU1kAkvqGbY3E03nsVqL0ntk83K5lEO0LSyzTXWwTgFqcbgiQ1tngtKRSbQC5QjN9va7gL+N7cC7CR6B0Q0Lwf7NNwxH7NxEpl5FQn0l4s9E9LSC5xO0Y1DVVhzEMcZndIBFxsb02S1x8sOC6HLNrnEJ7+xjZoMXM6/SUYjMeCUVJ4kqn/xkJ3byo+uku/P+0+HqchF8sydY78oEA1kUtDSlFXGI4HotAHP5gwxBH3Bw23sSh5YGi6MJKBjCPKCsx7Iufbe4LDVmsxstTgCfa05vgesfM5LcDrZwEgLSd/B5q00NOfEgGZai/Ds9orYHcNPRyZqhyYn55NuAqyeCVZVKbf9YkcrSWESAakGPGCqE4qZ+20s+bg5LQkudV1pcriPT0/APVF81tCgPBqF2VsjLkP7iIHlJjDua+0a1dYSsHnSwIRH3Mh/"
+
 matrix:
   include:
   - os: osx
@@ -20,8 +25,8 @@ addons:
     - icnsutils
 before_install:
 - mkdir -p /tmp/git-lfs && curl -L https://github.com/github/git-lfs/releases/download/v1.2.1/git-lfs-$([
-  "$TRAVIS_OS_NAME" == "linux" ] && echo "linux" || echo "darwin")-amd64-1.2.1.tar.gz
-  | tar -xz -C /tmp/git-lfs --strip-components 1 && /tmp/git-lfs/git-lfs pull
+    "$TRAVIS_OS_NAME" == "linux" ] && echo "linux" || echo "darwin")-amd64-1.2.1.tar.gz
+    | tar -xz -C /tmp/git-lfs --strip-components 1 && /tmp/git-lfs/git-lfs pull
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install --no-install-recommends -y icnsutils graphicsmagick xz-utils; fi
 install:
 - nvm install 7
