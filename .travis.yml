@@ -31,6 +31,7 @@ install:
 - yarn
 script:
 - yarn run build
+- npm run publish
 branches:
   only:
   - master
