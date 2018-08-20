@@ -5,11 +5,14 @@ branches:
     - master
 
 image: Visual Studio 2017
+
 platform:
   - x64
+
 environment:
   GH_TOKEN:
-    secure: ufEJdxOrWmUyg9/suAqkbnY7nMRaST9/6lmOULMFUwNRclZXfqUrOmsdMnLCX7oN
+    secure: cl8/jhfgOZNoU6Da8iTitH9ElqVCVziMSfAS9fwn2+CEcpZvRDPaiFZQARdQ4EQ/
+
 cache:
   - node_modules
   - '%APPDATA%\npm-cache'
