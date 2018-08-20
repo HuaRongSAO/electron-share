@@ -1,5 +1,5 @@
 Command line:
-"travis encrypt"
+"travis encrypt -r HuaRongSAO/electron-share GH_TOKEN=eff0f15e0f20758a96ec2c762e19ab0cc26adb2a"
 
 
    ________                                 __
@@ -26,7 +26,7 @@ Command line:
 
      There is absolutely no warranty on any results obtained from TRAVIS.
 
-  #  Running on lo at Mon Aug 20 10:19:58 2018 (PID 15491).
+  #  Running on lo at Mon Aug 20 09:58:38 2018 (PID 14013).
   #  Running in /home/chr/github/electron-share
   #  Source code version: Nov 07 2015.
   #  Compiled at Nov 17 2015 23:12:21.
@@ -40,7 +40,8 @@ Command line:
 
  >>> Please use a color scheme with dark background or specify "-nocolor"! <<<
 
-    Loading configuration from /home/chr/.travis.conf ...
+    No configuration file found.
+    Writing default configuration to /home/chr/.travis.conf ...
 
 Unknown parameter: "encrypt".
 

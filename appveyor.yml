@@ -9,7 +9,7 @@ platform:
   - x64
 environment:
   GH_TOKEN:
-    secure: tUJHFyeFa+U33SMu6l1lDK6F9Mm4l7eNfkUdC8JBJ/j5KlDehrW67AT0KAZSkgFN
+    secure: ufEJdxOrWmUyg9/suAqkbnY7nMRaST9/6lmOULMFUwNRclZXfqUrOmsdMnLCX7oN
 cache:
   - node_modules
   - '%APPDATA%\npm-cache'
