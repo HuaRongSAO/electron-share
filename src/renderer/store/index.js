@@ -1,11 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import modules from './modules'
-
 Vue.use(Vuex)
+const state = {}
+const getters = {}
+const mutations = {}
+const actions = {}
 
 export default new Vuex.Store({
-  modules,
+  state,
+  getters,
+  mutations,
+  actions,
   strict: process.env.NODE_ENV !== 'production'
 })

@@ -18,10 +18,14 @@ let webConfig = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(less|css)$/,
         use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader'
+          use: [{
+            loader: 'css-loader'
+          }, {
+            loader: 'less-loader'
+          }],
+          fallback: 'style-loader'
         })
       },
       {
@@ -31,7 +35,7 @@ let webConfig = {
       {
         test: /\.js$/,
         use: 'babel-loader',
-        include: [ path.resolve(__dirname, '../src/renderer') ],
+        include: [path.resolve(__dirname, '../src/renderer')],
         exclude: /node_modules/
       },
       {
