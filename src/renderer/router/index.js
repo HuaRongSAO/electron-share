@@ -7,8 +7,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'landing-page',
-      component: require('@/components/LandingPage').default
+      name: 'home',
+      component: require('@/view/home/home').default
     },
     {
       path: '*',

@@ -1,5 +1,5 @@
 <template>
-  <section class="page">
+  <section class="home">
     <div class="info">
       <div class="info__attr">
         <img :src="user.avatar_url">
@@ -26,11 +26,8 @@
 </template>
 
 <script>
-  import SystemInformation from './LandingPage/SystemInformation'
-
   export default {
-    name: 'landing-page',
-    components: {SystemInformation},
+    name: 'home',
     data () {
       return {
         user: {}
@@ -38,26 +35,25 @@
     },
     methods: {
       open (link) {
-        this.$electron.shell.openExternal(link)
       }
     },
     async mounted () {
       this.$loading()
       const httpParams = {
         url: this.$api.users,
-        path: {user: 'HuaRongSAO', repos: 'talib-document'},
+        path: {user: 'HuaRongSAO'},
         method: 'get'
       }
       const {data} = await this.$http(httpParams)
-      console.log(data)
       this.user = data
     }
   }
 </script>
 
 <style lang="less">
-  .page {
+  .home {
     width: 100%;
+    padding-top: 250px;
   }
 
   .info {
@@ -68,7 +64,7 @@
     &__attr {
       width: 100px;
       height: 100px;
-      margin: -80px auto 0;
+      margin: auto;
       border: 1px solid #eee;
       display: flex;
       img {

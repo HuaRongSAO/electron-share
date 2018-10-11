@@ -1,10 +1,10 @@
 <template>
-    <div id="app">
-        <router-view></router-view>
-        <Spin size="large" fix v-if="spinShow">
-            <Whale/>
-        </Spin>
-    </div>
+  <div id="app" :style="style">
+    <router-view></router-view>
+    <Spin fix v-if="loading">
+      <Whale/>
+    </Spin>
+  </div>
 </template>
 
 <script>
@@ -13,21 +13,34 @@
   export default {
     name: 'electron-share',
     components: {Whale},
-    data () {
-      return {
-        spinShow: true
+    computed: {
+      loading () {
+        return this.$store.getters.loading
+      },
+      style () {
+        return {
+          overflow: this.loading ? 'hidden' : 'auto'
+        }
       }
     }
   }
 </script>
 
 <style lang="less">
-    #app {
-        .ivu-spin-fix {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        .ivu-spin-dot {
-            background-color: #ff6102;
-        }
+  * {
+    box-sizing: border-box;
+  }
+
+  #app {
+    height: 100vh;
+    width: 100vw;
+    max-width: 1128px;
+    margin: auto;
+    .ivu-spin-fix {
+      background-color: rgba(255, 255, 255, 0.49);
     }
+    .ivu-spin-dot {
+      background-color: #ff6102;
+    }
+  }
 </style>
