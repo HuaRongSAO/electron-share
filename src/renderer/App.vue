@@ -15,11 +15,11 @@
     components: {Whale},
     computed: {
       loading () {
-        return this.$store.getters.loading
+        // return this.$store.getters.loading
       },
       style () {
         return {
-          overflow: this.loading ? 'hidden' : 'auto'
+          // overflow: this.loading ? 'hidden' : 'auto'
         }
       }
     }
@@ -34,7 +34,7 @@
   #app {
     height: 100vh;
     width: 100vw;
-    max-width: 1128px;
+    overflow-x: hidden;
     margin: auto;
     .ivu-spin-fix {
       background-color: rgba(255, 255, 255, 0.49);
@@ -42,5 +42,10 @@
     .ivu-spin-dot {
       background-color: #ff6102;
     }
+  }
+
+  .header {
+    height: 50px;
+    width: 100%;
   }
 </style>

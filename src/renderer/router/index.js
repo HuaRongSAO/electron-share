@@ -6,9 +6,24 @@ Vue.use(Router)
 const router = new Router({
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
-      component: require('@/view/home/home').default
+      component: require('@/view/home/Home').default
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: require('@/view/about/About').default
+    },
+    {
+      path: '/cheat',
+      name: 'cheat',
+      component: require('@/view/cheat/Cheat').default
+    },
+    {
+      path: '/',
+      name: 'index',
+      component: require('@/view/index/Index').default
     },
     {
       path: '*',
