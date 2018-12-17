@@ -1,24 +1,22 @@
 # electron-share
 
-> An electron-vue project
+> 基于 electron-vue 的桌面应用打包应用
 
-#### Build Setup
+## 打包状态
 
-``` bash
-# install dependencies
-npm install
+#### travis-ci
 
-# serve with hot reload at localhost:9080
-npm run dev
+[![Build Status](https://travis-ci.org/HuaRongSAO/electron-share.svg?branch=master)](https://travis-ci.org/HuaRongSAO/electron-share)
 
-# build electron application for production
-npm run build
+#### appveyor
 
+[![](https://img.shields.io/badge/style-popout--square-green.svg?logo=appveyor&style=popout-square)](https://ci.appveyor.com/project/HuaRongSAO/electron-share/history)
 
-```
 
 ---
+
 ## 打包平台
+
 - 1. appveyor https://ci.appveyor.com/project/HuaRongSAO/electron-share
 - 2. travis https://travis-ci.org/HuaRongSAO/electron-share
 
