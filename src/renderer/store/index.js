@@ -4,10 +4,14 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 const state = {
   loading: false,
-  bgImages: []
+  user: 'HuaRongSAO',
+  bgImages: [],
+  github: {}
 }
 const getters = {
-  loading: state => state.loading
+  loading: state => state.loading,
+  user: state => state.user,
+  github: state => state.github
 }
 const mutations = {
   SET_LOADING (state, loading) {
@@ -15,6 +19,12 @@ const mutations = {
   },
   SET_IMAGES (state, payload) {
     state.bgImages = payload
+  },
+  SET_USER (state, user) {
+    state.user = user
+  },
+  SET_GITHUB (state, github) {
+    state.github = github
   }
 }
 const actions = {
@@ -32,6 +42,19 @@ const actions = {
     }
     const {data} = await Vue.http(paramsRequest)
     commit('SET_IMAGES', data)
+  },
+  changeUser ({commit}, user) {
+    commit('SET_USER', user)
+  },
+  async getGithubInfo ({commit, state}) {
+    const {user} = state
+    const httpParams = {
+      url: Vue.api.users,
+      path: {user},
+      method: 'get'
+    }
+    const {data} = await Vue.http(httpParams)
+    commit('SET_GITHUB', data)
   }
 }
 

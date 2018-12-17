@@ -22,6 +22,11 @@ const router = new Router({
     },
     {
       path: '/',
+      name: 'search',
+      component: require('@/view/search/Search').default
+    },
+    {
+      path: '/index',
       name: 'index',
       component: require('@/view/index/Index').default
     },
