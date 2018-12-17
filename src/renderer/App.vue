@@ -15,11 +15,11 @@
     components: {Whale},
     computed: {
       loading () {
-        // return this.$store.getters.loading
+        return this.$store.getters.loading
       },
       style () {
         return {
-          // overflow: this.loading ? 'hidden' : 'auto'
+          overflow: this.loading ? 'hidden' : 'auto'
         }
       }
     }
