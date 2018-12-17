@@ -15,6 +15,7 @@
     components: {Whale},
     computed: {
       loading () {
+        // loading
         return this.$store.getters.loading
       },
       style () {
