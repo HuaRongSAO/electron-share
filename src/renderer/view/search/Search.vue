@@ -4,7 +4,7 @@
       <input v-model="user" type="text" placeholder="请输入你的github用户ID">
       <div class="search"></div>
     </div>
-    <img src="//api.i-meto.com/bing" class="search-page__bg">
+    <img src="http://api.i-meto.com/bing" class="search-page__bg">
   </section>
 </template>
 
@@ -22,13 +22,14 @@
       }
     },
     methods: {
-      searchHandler () {
+      async searchHandler () {
         if (this.user === '') {
           this.$Message.error('github用户ID不能为空！')
           return
         }
-        this.$store.dispatch('getGithubInfo').catch(err => {
-          this.$Message.error('请输入一个正确的github用户ID')
+        await this.$store.dispatch('getGithubInfo').catch(err => {
+          this.$Message.error(err.message)
+          this.$Message.error("出现了错误，请检查你的输入是否正确")
           throw err
         })
         this.$router.push({name: 'index'})

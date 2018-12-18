@@ -46,8 +46,8 @@ const actions = {
   changeUser ({commit}, user) {
     commit('SET_USER', user)
   },
-  async getGithubInfo ({commit, state}) {
-    const {user} = state
+  async getGithubInfo ({commit, getters}) {
+    const {user} = getters
     const httpParams = {
       url: Vue.api.users,
       path: {user},
