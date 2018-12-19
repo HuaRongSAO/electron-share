@@ -54,7 +54,7 @@ app.on("activate", function() {
 
 只需把你的打包后的文件直接替换就行了，例如其他的 Vue,React，angular 打包后的文件，`js mainWindow.loadFile("index.html");`的 index.html 改成你的文件地址。
 
-### vlo.2 [electron-vue 基于 vue 的应用](https://github.com/SimulatedGREG/electron-vue)
+### vol.2 [electron-vue 基于 vue 的应用](https://github.com/SimulatedGREG/electron-vue)
 
 > electron-vue 充分利用 vue-cli 作为脚手架工具，加上拥有 vue-loader 的 webpack、electron-packager 或是 electron-builder，以及一些最常用的插件，如 vue-router、vuex 等等。
 
@@ -95,8 +95,11 @@ app.on("activate", function() {
 
 - 进入项目仓库的[releases 界面](https://github.com/HuaRongSAO/electron-share/releases)
 - 创建草稿版本
+
 - ![p2.png](https://upload-images.jianshu.io/upload_images/6167081-1253a9cb08ee4905.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 - ![p3.png](https://upload-images.jianshu.io/upload_images/6167081-01ccfe648f2ce01e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 - 版本号管理依赖于 package.json
 
 ### vol.5 持续集成
